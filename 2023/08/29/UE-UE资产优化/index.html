@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>UE资产优化 | RuiChen</title><meta name="author" content="RuiChen"><meta name="copyright" content="RuiChen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="[[官方培训]22-UE资产优化 | Epic 肖月_哔哩哔哩_bilibili](https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1FT411x7hU&#x2F;?spm_id_from&#x3D;333.788&amp;vd_source&#x3D;b1de3fe38e887eb40fc55a5485724480)  # stat命令行 stat fps 显示fpsstat unit 显示更详细的各项指标sta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UE资产优化">
+<meta property="og:url" content="http://example.com/2023/08/29/UE-UE%E8%B5%84%E4%BA%A7%E4%BC%98%E5%8C%96/index.html">
+<meta property="og:site_name" content="RuiChen">
+<meta property="og:description" content="[[官方培训]22-UE资产优化 | Epic 肖月_哔哩哔哩_bilibili](https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1FT411x7hU&#x2F;?spm_id_from&#x3D;333.788&amp;vd_source&#x3D;b1de3fe38e887eb40fc55a5485724480)  # stat命令行 stat fps 显示fpsstat unit 显示更详细的各项指标sta">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/violet-chen/image_lib@main/img/img%20(23).jpg">
+<meta property="article:published_time" content="2023-08-28T19:57:00.000Z">
+<meta property="article:modified_time" content="2023-08-30T14:23:00.526Z">
+<meta property="article:author" content="RuiChen">
+<meta property="article:tag" content="UnrealEngine">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.staticaly.com/gh/violet-chen/image_lib@main/img/img%20(23).jpg"><link rel="shortcut icon" href="/assets/P5.webp"><link rel="canonical" href="http://example.com/2023/08/29/UE-UE%E8%B5%84%E4%BA%A7%E4%BC%98%E5%8C%96/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'UE资产优化',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-30 22:23:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (true) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/TouXiang.jpg" onerror="onerror=null;src='null'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis"><i class="fa-fw fas fa-video"></i><span> 追番列表</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.staticaly.com/gh/violet-chen/image_lib@main/img/img%20(23).jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="RuiChen"><span class="site-name">RuiChen</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis"><i class="fa-fw fas fa-video"></i><span> 追番列表</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">UE资产优化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-08-28T19:57:00.000Z" title="Created 2023-08-29 03:57:00">2023-08-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-08-30T14:23:00.526Z" title="Updated 2023-08-30 22:23:00">2023-08-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/UnrealEngine/">UnrealEngine</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">671</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>3min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="UE资产优化"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><meta name="referrer" content="no-referrer" />
+[[官方培训]22-UE资产优化 | Epic 肖月_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1FT411x7hU/?spm_id_from=333.788&vd_source=b1de3fe38e887eb40fc55a5485724480)
+<a name="wsIVK"></a>
+# stat命令行
+stat fps 显示fps<br />stat unit 显示更详细的各项指标<br />stat unitgraph 在unit的基础上添加曲线图<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/2623605/1685606320677-efb2a5c3-144b-48cf-ab7b-4079f8dcfde1.png#averageHue=%232d261d&clientId=u8195db48-42bc-4&from=paste&height=991&id=uf86704cb&originHeight=991&originWidth=2323&originalType=binary&ratio=1&rotation=0&showTitle=false&size=770722&status=done&style=none&taskId=ua83f0b3e-ac1f-4473-878e-82a4989a3c0&title=&width=2323)<br />如果瓶颈在渲染线程那么可以使用<br />stat scenerendering 命令展开详细的渲染线程中各部的实际消耗以及场景渲染信息<br />initViews是做可见性剔除时的消耗<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/2623605/1685606570028-a7af7816-67d2-4f4f-90e1-ebaf785320a5.png#averageHue=%23181614&clientId=u8195db48-42bc-4&from=paste&height=982&id=u6d820b89&originHeight=982&originWidth=2443&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1408310&status=done&style=none&taskId=u93222905-0641-4046-8e76-b24e8ad68e4&title=&width=2443)<br />通过stat initviews可先详细展开剔除过程中的消耗<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/2623605/1685606819451-e3cdcb42-96fe-4db1-acf7-af198ee121d6.png#averageHue=%233d382f&clientId=u8195db48-42bc-4&from=paste&height=987&id=u7e85227b&originHeight=987&originWidth=1483&originalType=binary&ratio=1&rotation=0&showTitle=false&size=995092&status=done&style=none&taskId=udaf7c56f-b309-4342-83e2-0dc8da87aed&title=&width=1483)<br />stat RHI 显示各个buffer在显存中的占用<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/2623605/1685606876999-b07a85d3-fe9d-40a3-8714-fe22449fcc0c.png#averageHue=%23453f34&clientId=u8195db48-42bc-4&from=paste&height=955&id=u91fb0019&originHeight=955&originWidth=2226&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1475319&status=done&style=none&taskId=ua3da331f-bb67-487d-8e13-ea73d5e649f&title=&width=2226)<br />stat GPU 查看GPU各个Pass的消耗<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/2623605/1685606971531-0e4897b8-edcc-4e43-b54b-e485c140af7b.png#averageHue=%23302d28&clientId=u8195db48-42bc-4&from=paste&height=878&id=u3e3ce981&originHeight=878&originWidth=2327&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1086674&status=done&style=none&taskId=ueeda9ca4-c57a-458e-8080-577f53987f0&title=&width=2327)
+<a name="L4oOX"></a>
+# 快捷键
+通过ctrl+shift+逗号可以打开GPU查看器<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/2623605/1685607036697-e86c3e34-4381-4cad-bb1a-301e577b7b2d.png#averageHue=%233d3d3c&clientId=u8195db48-42bc-4&from=paste&height=956&id=u49f17ce1&originHeight=956&originWidth=871&originalType=binary&ratio=1&rotation=0&showTitle=false&size=278083&status=done&style=none&taskId=u7b25dcd2-d062-4fff-8d12-107e19cb371&title=&width=871)
+
+<p><a name="IiuFe"></a></p>
+<h1 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685607257820-ab719eb4-c18a-4e92-bde6-a988caab724e.png#averageHue=%230d0d0d&clientId=u8195db48-42bc-4&from=paste&height=709&id=u4e5f5151&originHeight=709&originWidth=1994&originalType=binary&ratio=1&rotation=0&showTitle=false&size=256779&status=done&style=none&taskId=u8887e6a2-ed6e-4fce-af91-36143feec02&title=&width=1994" alt="image.png"><br><a name="f09x5"></a></p>
+<h2 id="Culling剔除"><a href="#Culling剔除" class="headerlink" title="Culling剔除"></a>Culling剔除</h2><p>当不适用Nanite时剔除是逐物体&#x2F;Instance剔除的，只能通过距离剔除的设置来进行优化，或者针对模型进行优化。<br />而使用Nanite时，Nanite的剔除更加高效，它的单位不是单个个体，而是会针对细化到模型内部相邻的三角面组成的Cluster，剔除的工作大部分是在GPU上高效进行的。<br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685607490997-0d698a86-0860-413c-82fd-e57aa95b40cd.png#averageHue=%23070707&clientId=u8195db48-42bc-4&from=paste&height=500&id=ua1241790&originHeight=500&originWidth=759&originalType=binary&ratio=1&rotation=0&showTitle=false&size=123973&status=done&style=none&taskId=ub85d9d8b-1e0e-4b85-a4cc-d0819f8d839&title=&width=759" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685607624468-1b01403c-9040-4fd4-baad-b5b796993b33.png#averageHue=%230c0c0c&clientId=u8195db48-42bc-4&from=paste&height=301&id=u4e8195a0&originHeight=301&originWidth=444&originalType=binary&ratio=1&rotation=0&showTitle=false&size=57209&status=done&style=none&taskId=ud962ab9d-b3d0-4c65-8c1d-f7077be0e85&title=&width=444" alt="image.png"><br><a name="MXYfF"></a></p>
+<h2 id="DrawCall"><a href="#DrawCall" class="headerlink" title="DrawCall"></a>DrawCall</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685607795816-1ac93eb5-890e-46a6-b671-eb22df9b5548.png#averageHue=%23131313&clientId=u8195db48-42bc-4&from=paste&height=395&id=u4d656409&originHeight=395&originWidth=929&originalType=binary&ratio=1&rotation=0&showTitle=false&size=160544&status=done&style=none&taskId=u4e447b4f-924c-48d7-9ad4-c1c1b2c889c&title=&width=929" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685608086157-0d9312e2-ff7d-4be2-9602-da536cd422da.png#averageHue=%230c0c0c&clientId=u8195db48-42bc-4&from=paste&height=405&id=ua8efe4b3&originHeight=405&originWidth=925&originalType=binary&ratio=1&rotation=0&showTitle=false&size=120971&status=done&style=none&taskId=u14698bb0-bd07-4006-9336-7984198ea08&title=&width=925" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685608107103-cb65d586-cf29-42ef-b0fe-6f81d90e010a.png#averageHue=%23191919&clientId=u8195db48-42bc-4&from=paste&height=860&id=u8671d121&originHeight=860&originWidth=801&originalType=binary&ratio=1&rotation=0&showTitle=false&size=201343&status=done&style=none&taskId=ued9e4aa5-c616-4840-b34e-ce209952514&title=&width=801" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685608163597-f76725e7-59fe-4902-b52e-8d1b16a0285e.png#averageHue=%23121211&clientId=u8195db48-42bc-4&from=paste&height=311&id=ud974e658&originHeight=311&originWidth=870&originalType=binary&ratio=1&rotation=0&showTitle=false&size=102226&status=done&style=none&taskId=u795eda15-0623-47f3-bf2b-a5044e2686b&title=&width=870" alt="image.png"><br><a name="sEIdu"></a></p>
+<h2 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685608190470-501b6786-e699-480d-ac96-229cd9e6274c.png#averageHue=%23080808&clientId=u8195db48-42bc-4&from=paste&height=516&id=uc2b96cfa&originHeight=516&originWidth=1346&originalType=binary&ratio=1&rotation=0&showTitle=false&size=199306&status=done&style=none&taskId=uc814b638-af30-428b-a1fe-d01e629afd1&title=&width=1346" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685608425906-71952c9e-2011-4b0d-bee1-7c13027cbe33.png#averageHue=%23050505&clientId=u8195db48-42bc-4&from=paste&height=581&id=u86bb9238&originHeight=581&originWidth=1269&originalType=binary&ratio=1&rotation=0&showTitle=false&size=238794&status=done&style=none&taskId=ufd7ae8e1-67f0-432e-a579-6c0e8fac2b0&title=&width=1269" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685608469069-8d93cb5a-132a-4038-8123-02c3a47aa9cd.png#averageHue=%230c0c0c&clientId=u8195db48-42bc-4&from=paste&height=291&id=u63f7f497&originHeight=291&originWidth=636&originalType=binary&ratio=1&rotation=0&showTitle=false&size=54026&status=done&style=none&taskId=u16111898-b546-4931-a3f0-17ff194af40&title=&width=636" alt="image.png"><br><a name="DMY60"></a></p>
+<h2 id="Nanite"><a href="#Nanite" class="headerlink" title="Nanite"></a>Nanite</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685608557517-91366832-70cb-464f-8bc1-75097e3703bd.png#averageHue=%236b6931&clientId=u8195db48-42bc-4&from=paste&height=994&id=ud15991a5&originHeight=994&originWidth=1865&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1764201&status=done&style=none&taskId=u17fbf1fa-23f1-4403-a8e0-23534216343&title=&width=1865" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685608832279-f78cbf08-3fdf-491a-9f01-066a778d614e.png#averageHue=%230f0f0f&clientId=u8195db48-42bc-4&from=paste&height=577&id=u44a009a9&originHeight=577&originWidth=1248&originalType=binary&ratio=1&rotation=0&showTitle=false&size=207410&status=done&style=none&taskId=u349410f2-beb4-4aa0-8e9b-9df990a3f8c&title=&width=1248" alt="image.png"><br />UE有自带bool合并工具可以修穿插<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685608859381-a9154a8b-8333-4a03-973c-450a2e7ad794.png#averageHue=%23282524&clientId=u8195db48-42bc-4&from=paste&height=274&id=u6a48d177&originHeight=274&originWidth=758&originalType=binary&ratio=1&rotation=0&showTitle=false&size=57719&status=done&style=none&taskId=ue699b607-90e4-4a4f-adb4-31397ae3144&title=&width=758" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685608874634-656a88dc-db4b-4c75-bf0d-bd5ea17901b2.png#averageHue=%23070707&clientId=u8195db48-42bc-4&from=paste&height=979&id=u3299dcba&originHeight=979&originWidth=1314&originalType=binary&ratio=1&rotation=0&showTitle=false&size=310334&status=done&style=none&taskId=u411ebcb0-db6a-4336-bedd-f4e0bd3af41&title=&width=1314" alt="image.png"><br><a name="MLEpS"></a></p>
+<h1 id="材质"><a href="#材质" class="headerlink" title="材质"></a>材质</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685609020669-46238efe-627b-46d3-b928-c735889dd3b0.png#averageHue=%230e0d0d&clientId=u8195db48-42bc-4&from=paste&height=1168&id=ue238c828&originHeight=1168&originWidth=2427&originalType=binary&ratio=1&rotation=0&showTitle=false&size=632181&status=done&style=none&taskId=u31c7fef7-9fe8-4a24-beb7-f099374df88&title=&width=2427" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685609060761-543fd9db-b068-4c34-a26e-2ecaaf075bba.png#averageHue=%231e1e1e&clientId=u8195db48-42bc-4&from=paste&height=969&id=u26b9ca59&originHeight=969&originWidth=2288&originalType=binary&ratio=1&rotation=0&showTitle=false&size=559795&status=done&style=none&taskId=u8f6544db-1e73-4b28-ae4a-470c5d2f00e&title=&width=2288" alt="image.png"><br />fully rough：<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685609157070-cd1a8ca8-0127-4247-ab2f-ed4b8e73d248.png#averageHue=%23787769&clientId=u8195db48-42bc-4&from=paste&height=729&id=uc8c7e59f&originHeight=729&originWidth=751&originalType=binary&ratio=1&rotation=0&showTitle=false&size=318472&status=done&style=none&taskId=udbcea58f-c6d2-4fb7-8c2d-d50b01262a5&title=&width=751" alt="image.png"><br><a name="UpVmJ"></a></p>
+<h1 id="纹理"><a href="#纹理" class="headerlink" title="纹理"></a>纹理</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685609214543-07f28433-ea25-45fe-bd7d-738c37b434c0.png#averageHue=%230c0c0c&clientId=u8195db48-42bc-4&from=paste&height=651&id=u23809031&originHeight=651&originWidth=1275&originalType=binary&ratio=1&rotation=0&showTitle=false&size=179073&status=done&style=none&taskId=u4ca0bb6a-26ad-4bfb-952b-20026750580&title=&width=1275" alt="image.png"><br><a name="KsJxG"></a></p>
+<h1 id="灯光"><a href="#灯光" class="headerlink" title="灯光"></a>灯光</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685609271688-ff387963-50f9-4623-a8c3-614c8c8305f4.png#averageHue=%231f1e1e&clientId=u8195db48-42bc-4&from=paste&height=1205&id=u981660e4&originHeight=1205&originWidth=2446&originalType=binary&ratio=1&rotation=0&showTitle=false&size=560781&status=done&style=none&taskId=u4b5feb48-6898-4063-9fac-96701bd29aa&title=&width=2446" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685609358977-878283c0-a2b1-4616-88ab-9ec95521ea6a.png#averageHue=%23262524&clientId=u8195db48-42bc-4&from=paste&height=985&id=u7a0568be&originHeight=985&originWidth=2390&originalType=binary&ratio=1&rotation=0&showTitle=false&size=539733&status=done&style=none&taskId=u6da55a67-1f9f-40c8-b0cf-d807351cb0d&title=&width=2390" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685609628119-05a27dd7-d9d0-43eb-8139-b3a99836e86f.png#averageHue=%23080808&clientId=u8195db48-42bc-4&from=paste&height=444&id=u726bc5f7&originHeight=444&originWidth=773&originalType=binary&ratio=1&rotation=0&showTitle=false&size=99803&status=done&style=none&taskId=uc7277288-d34a-4f7d-81ac-b280837dc81&title=&width=773" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685609784314-359ae1ab-73fa-4f4e-9800-3b4009de72cb.png#averageHue=%23040404&clientId=u8195db48-42bc-4&from=paste&height=599&id=u9553111f&originHeight=599&originWidth=1040&originalType=binary&ratio=1&rotation=0&showTitle=false&size=233101&status=done&style=none&taskId=u77dc0983-e288-40ac-a34f-418514e6277&title=&width=1040" alt="image.png"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685609939021-0e7af55e-6817-4a11-86ff-a346a57ac753.png#averageHue=%2323201f&clientId=u8195db48-42bc-4&from=paste&height=577&id=u7baa2617&originHeight=577&originWidth=1538&originalType=binary&ratio=1&rotation=0&showTitle=false&size=348837&status=done&style=none&taskId=u9c1a9aa0-bf05-42ab-ae4c-95c3325d0dc&title=&width=1538" alt="image.png"><br><a name="aqKLD"></a></p>
+<h1 id="Lumen与资产制作"><a href="#Lumen与资产制作" class="headerlink" title="Lumen与资产制作"></a>Lumen与资产制作</h1><p>影视一般使用硬件的Ray Tracing精度</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685609957079-10510399-f191-4174-9c49-b179eb9fae0f.png#averageHue=%23211d1b&clientId=u8195db48-42bc-4&from=paste&height=1182&id=ue3081588&originHeight=1182&originWidth=2472&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1484625&status=done&style=none&taskId=uee2212d6-5f77-4971-98a1-82284f3874b&title=&width=2472" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685611519095-56d908bc-21a7-4f7b-a622-e57efbcfd1b2.png#averageHue=%230a0909&clientId=u8195db48-42bc-4&from=paste&height=1237&id=u85433e5d&originHeight=1237&originWidth=1908&originalType=binary&ratio=1&rotation=0&showTitle=false&size=447268&status=done&style=none&taskId=uff9ce93d-ef32-4a53-a9e7-624cebcb250&title=&width=1908" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685611617189-b39f1dda-aa0c-48b7-b900-3350dd2dac91.png#averageHue=%23626051&clientId=u8195db48-42bc-4&from=paste&height=1264&id=ub5bac2de&originHeight=1264&originWidth=2461&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1358301&status=done&style=none&taskId=u8d613c93-02f0-4f8a-bc87-16067a92b48&title=&width=2461" alt="image.png"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685611655799-306f037d-66e1-4820-bda1-8b6fadca37d1.png#averageHue=%23222120&clientId=u8195db48-42bc-4&from=paste&height=1425&id=u995c5efe&originHeight=1425&originWidth=2664&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1072247&status=done&style=none&taskId=u324ba142-6a1e-4be2-88ec-dd7b9a6b903&title=&width=2664" alt="image.png"><br><a name="hpl5G"></a></p>
+<h1 id="特效"><a href="#特效" class="headerlink" title="特效"></a>特效</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/2623605/1685611702549-91def887-9bd4-4d30-96b5-a7798e9f10b1.png#averageHue=%230f0f0f&clientId=u8195db48-42bc-4&from=paste&height=1194&id=uaf1ab5f3&originHeight=1194&originWidth=2103&originalType=binary&ratio=1&rotation=0&showTitle=false&size=595796&status=done&style=none&taskId=ua2945f62-f240-441a-bd72-dd7fd2c5b15&title=&width=2103" alt="image.png"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">RuiChen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/08/29/UE-UE%E8%B5%84%E4%BA%A7%E4%BC%98%E5%8C%96/">http://example.com/2023/08/29/UE-UE%E8%B5%84%E4%BA%A7%E4%BC%98%E5%8C%96/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/UnrealEngine/">UnrealEngine</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.staticaly.com/gh/violet-chen/image_lib@main/img/img%20(23).jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/08/29/UE-UE%E8%A7%92%E8%89%B2%E8%A1%A8%E7%8E%B0/" title="UE角色表现"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.staticaly.com/gh/violet-chen/image_lib@main/img/img%20(10).jpg" onerror="onerror=null;src='/assets/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">UE角色表现</div></div></a></div><div class="next-post pull-right"><a href="/2023/08/29/UE-UE%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%8A%A8%E7%94%BB%E5%88%B6%E4%BD%9C%E6%B5%81%E7%A8%8B/" title="UE非线性动画制作流程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.staticaly.com/gh/violet-chen/image_lib@main/img/img%20(59).jpg" onerror="onerror=null;src='/assets/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">UE非线性动画制作流程</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2023/08/29/UE-UE%E8%B5%84%E4%BA%A7%E4%BB%A5%E5%8F%8A%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" title="UE资产以及版本管理"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.staticaly.com/gh/violet-chen/image_lib@main/img/img%20(19).jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-29</div><div class="title">UE资产以及版本管理</div></div></a></div><div><a href="/2023/08/29/UE-UE%E8%A7%92%E8%89%B2%E8%A1%A8%E7%8E%B0/" title="UE角色表现"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.staticaly.com/gh/violet-chen/image_lib@main/img/img%20(10).jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-29</div><div class="title">UE角色表现</div></div></a></div><div><a href="/2023/08/29/UE-UE%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%8A%A8%E7%94%BB%E5%88%B6%E4%BD%9C%E6%B5%81%E7%A8%8B/" title="UE非线性动画制作流程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.staticaly.com/gh/violet-chen/image_lib@main/img/img%20(59).jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-29</div><div class="title">UE非线性动画制作流程</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/TouXiang.jpg" onerror="this.onerror=null;this.src='/null'" alt="avatar"/></div><div class="author-info__name">RuiChen</div><div class="author-info__description">RuiChen</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.yuque.com/quanmianxiaokangdelouwangzhiyu"><i class="https://mdn.alipayobjects.com/huamei_0prmtq/afts/img/A*9uyGR6gGcI4AAAAAAAAAAAAADvuFAQ/original"></i><span>前往语雀...</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/violet-chen" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B"><span class="toc-text">模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Culling%E5%89%94%E9%99%A4"><span class="toc-text">Culling剔除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DrawCall"><span class="toc-text">DrawCall</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GPU"><span class="toc-text">GPU</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nanite"><span class="toc-text">Nanite</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%90%E8%B4%A8"><span class="toc-text">材质</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%B9%E7%90%86"><span class="toc-text">纹理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%81%AF%E5%85%89"><span class="toc-text">灯光</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lumen%E4%B8%8E%E8%B5%84%E4%BA%A7%E5%88%B6%E4%BD%9C"><span class="toc-text">Lumen与资产制作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%B9%E6%95%88"><span class="toc-text">特效</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By RuiChen</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="5094342544" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:24%;}.categoryBar-list{max-height: 380px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 320px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(/assets/img1.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/MayaPy/&quot;);" href="javascript:void(0);">MayaPy</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/assets/img2.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/NukePy/&quot;);" href="javascript:void(0);">NukePy</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/assets/img3.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/UnrealEngine/&quot;);" href="javascript:void(0);">UnrealEngine</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/assets/img4.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/UE开发/&quot;);" href="javascript:void(0);">UE开发</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/assets/img5.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/计算机知识与其他开发相关/&quot;);" href="javascript:void(0);">计算机知识与其他开发相关</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/assets/img6.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/PySide2/&quot;);" href="javascript:void(0);">PySide2</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><!-- hexo injector body_end end --></body></html>
